@@ -1,0 +1,768 @@
+        /* header部分开始-------------------------------------------- 
+         header部分开始--------------------------------------------- */
+         body {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .baise {
+            width: 100%;
+            background-color: #fff;
+        }
+
+        /* 头部区域样式 */
+        .header {
+            width: 1000px;
+            height: 42px;
+            font-size: 0px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* 腾讯logo样式 */
+        .txyxlogo {
+            display: inline-block;
+            margin-left: 10px;
+            width: 150px;
+            height: 41px;
+            background: url(../images/common/tengxunyouxilogo2.png) no-repeat center center;
+            background-size: 101px 100px;
+            position: relative;
+            z-index: 99;
+        }
+
+        /* logo后广告 */
+        .logoafter {
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+
+        /* 点击logo产生的大广告 */
+        .shouyeshangcengdatu {
+            position: absolute;
+            top: 0px;
+            left: 12px;
+            display: none;
+            z-index: 100;
+        }
+
+        /* 点击小广告产生大广告 */
+        .logoafter:hover .shouyeshangcengdatu {
+            display: block;
+        }
+
+        /* header右部分样式 */
+        .headerright {
+            width: 275px;
+            float: right;
+        }
+
+        /* header右半部分的a标签样式 */
+        .headerright>a {
+            display: inline-block;
+            font-size: 14px;
+            height: 42px;
+            line-height: 41px;
+        }
+
+        /* header右部分第一个a标签与第二个的距离 */
+        .headerright>a:first-child {
+            z-index: 3;
+            margin-right: 20px;
+        }
+
+        /* header右部分第一个a标签鼠标经过改变颜色 */
+        .headerright>a:first-child:hover {
+            color: rgb(255, 138, 87);
+        }
+
+        /* .headerright a:first-child:hover .headerpaihang {
+            display: block;
+        } */
+
+        /* 添加链接的背景图片 添加此类前面出现绿色圆圈 */
+        .lvseyuanquan::after {
+            content: '';
+            background: url(../images/common/title_sprite.png);
+            background-position: -30px 0;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            left: 5px;
+            position: absolute;
+        }
+
+        .lvseyuanquan {
+            position: relative;
+            padding-left: 34px;
+        }
+
+        /* 添加链接的背景图片 添加此类后面出现箭头 */
+        .xiahuisejiantou::after {
+            content: '';
+            background: url(../images/common/title_sprite.png);
+            background-position: 0 0;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            right: 3px;
+            position: absolute;
+            opacity: .1;
+            transform: rotate(90deg);
+        }
+
+        .xiahuisejiantou {
+            position: relative;
+            padding-right: 29px;
+        }
+
+        /* header右侧大排行榜 */
+        .headerpaihang {
+            width: 707px;
+            height: 580px;
+            position: absolute;
+            top: 42px;
+            right: 18px;
+            background-color: #fff;
+            display: none;
+            animation: chuxian 0.4s linear;
+            z-index: 101;
+            cursor: default;
+        }
+
+        /* 触摸激发排行榜 */
+        .headerright>a:last-child:hover .headerpaihang {
+            display: block;
+        }
+
+        /* 调节小li的上下外边距 大小 */
+        .headerpaihang ul li {
+            position: relative;
+            width: 200px;
+            /* height: 90px; */
+            margin-bottom: 24px;
+        }
+
+        /* 大排行榜缓慢出现 */
+        @keyframes chuxian {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 制造一个假的盒子 用于监听大盒子 */
+        /* .jiadehezi {
+            width: 707px;
+            height: 622px;
+            position: absolute;
+            top: 0px;
+            right: 278px;
+            z-index: 1;
+        } */
+
+        /* 调节每个排行榜之间的间距 */
+        .headerpaihang .oneheaderpaihang {
+            float: left;
+        }
+
+        /* 第一列空隙更大 */
+        .headerright .headerpaihang .oneheaderpaihang:nth-child(1) {
+            margin-left: 35px;
+        }
+
+        /* .headerpaihang .oneheaderpaihang:last-child {
+            margin-left: 0px;
+            float: right;
+        } */
+
+        /* 第三个中间出现了p标签 对他单独赋予样式 */
+        .headerpaihang .oneheaderpaihang:last-child ul li:nth-child(5) p {
+            padding-left: 0px;
+            width: 224px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+        }
+
+        /* 头部排行榜说明 */
+        .headerpaihang .oneheaderpaihang>p {
+            width: 224px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+        }
+
+        /* 改变小li中的p */
+        .headerpaihang .oneheaderpaihang ul li>p {
+            color: black;
+            font-size: 12px;
+            line-height: 16px;
+            padding-left: 22px;
+        }
+
+        /* 让图片撑满盒子 */
+        .headerpaihang .oneheaderpaihang ul li img {
+            width: 200px;
+            height: 90px;
+        }
+
+        .headerpaihang .oneheaderpaihang ul li div a:hover {
+            color: white;
+        }
+
+        /* 右灰色箭头 */
+        .youhuisejiantou::after {
+            content: '';
+            background: url(../images/common/title_sprite.png);
+            background-position: 0 0;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            right: 35px;
+            position: absolute;
+            opacity: .1;
+        }
+
+        .youhuisejiantou {
+            position: relative;
+        }
+
+        /* 将自身变成灰色和红色的正方形的排名 */
+        .huiseorder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            color: #fff;
+            background-color: #ccc;
+        }
+
+        .hongseorder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            color: #fff;
+            background-color: rgb(198, 40, 40);
+        }
+
+        /* 进入官网和进入游戏的整个大盒子 */
+        .paihangbigblack {
+            position: absolute;
+            width: 100%;
+            height: 28px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            bottom: 0;
+            left: 0;
+            display: none;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* 黑色盒子里面的两部分小a */
+        .oneheaderpaihang .paihangbigblack .paihangsmallblack {
+            padding: 0;
+            float: left;
+            width: 50%;
+            font-size: 14px;
+            line-height: 28px;
+            color: #fff;
+            cursor: pointer;
+        }
+        /* 背景 */
+        .beijing {
+            position: absolute;
+            width: 100%;
+            top: 42px;
+            z-index: -1;
+        }
+        /* 四个大背景 */
+        .beijing1 {
+            background: url(../images/common/zizhubeijing1.jpg) no-repeat center;
+            height: 749px;
+        }
+
+        .beijing2 {
+            background: url(../images/common/zizhubeijing2.jpg) no-repeat center;
+            height: 874px;
+        }
+
+        .beijing3 {
+            background: url(../images/common/zizhubeijing3.jpg) no-repeat center;
+            height: 714px;
+        }
+
+        .beijing4 {
+            background: url(../images/common/zizhubeijing4.jpg) no-repeat center;
+            height: 1072px;
+        }
+        /*最上层的logo大图  */
+        .toplogo {
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            height: 790px;
+        }
+        /* 王者荣耀图标 */
+        .toplogo a {
+            width: 157px;
+            height: 117px;
+            position: absolute;
+            margin-left: -130px;
+            top: 20px;
+            z-index: 10;
+            background: url(../images/common/wangzherongyaologo3.png) no-repeat;
+        }
+        /* 主体部分 */
+        .main {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 登录 */
+        .login {
+            text-align: center;
+            font-size: 18px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+        /* 登陆链接 */
+        .login a {
+            color: #379BFF;
+        }
+        /* 出现下划线 */
+        .login a:hover {
+            text-decoration: underline
+        }
+        /* 自助专区头部 */
+        .zizhuheader {
+            width: 1000px;
+            height: 135px;
+            background: url(../images/common/zizhufuwutitle.png) no-repeat;
+            margin-bottom: 38px;
+        }
+        /* 自主部分小区域 */
+        .zizhufuwu ul li {
+            float: left;
+            width: 251px;
+            height: 251px;
+            margin: 0 35px 50px;
+        }
+        /* 设置背景图片  */
+        .zizhufuwu ul li:nth-child(1) a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../images/common/zizhuimg1.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(2) a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../images/common/zizhuimg2.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(3) a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../images/common/zizhuimg3.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(4) a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../images/common/zizhuimg4.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(5) a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../images/common/zizhuimg5.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(6) a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../images/common/zizhuimg6.png) no-repeat;
+        }
+        /* 鼠标经过更改背景图片 */
+        .zizhufuwu ul li:nth-child(1):hover a {
+            background: url(../images/common/zizhuimg11.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(2):hover a {
+            background: url(../images/common/zizhuimg22.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(3):hover a {
+            background: url(../images/common/zizhuimg33.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(4):hover a {
+            background: url(../images/common/zizhuimg44.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(5):hover a {
+            background: url(../images/common/zizhuimg55.png) no-repeat;
+        }
+
+        .zizhufuwu ul li:nth-child(6):hover a {
+            background: url(../images/common/zizhuimg66.png) no-repeat;
+        }
+        /* 下层间隙 */
+        .zizhufuwu {
+            margin-bottom: 84px;
+        }
+        /* 头部左侧图片 */
+        .jinghuazhuanqu .zizhuheader {
+            background: url(../images/common/jinghuazhuanqutitle.png) no-repeat;
+        }
+        /* 头部标题 */
+        .jinghuasmalltitle .lefttitle {
+            width: 453px;
+            height: 26px;
+            float: left;
+            margin-left: 24px;
+            margin-top: 55px;
+            background: url(../images/common/chufachaxun.png) no-repeat;
+        }
+        /* 右侧标题 */
+        .jinghuasmalltitle .righttitle {
+            width: 453px;
+            height: 26px;
+            float: left;
+            margin-left: 24px;
+            margin-top: 55px;
+            background: url(../images/common/jubaochaxun.png) no-repeat;
+        }
+        /* 净化专区 */
+        .jinghuazhuanqu {
+            margin-bottom: 100px;
+        }
+        /* 精华专区左部分 */
+        .jinghualeft {
+            float: left;
+            width: 500px;
+        }
+        /* 净化专区左部分样式 */
+        .jinghualeft div {
+            margin: 26px 42px 0;
+            width: 160px;
+            height: 160px;
+            float: left;
+            cursor: pointer;
+        }
+        /* 设置背景图片 */
+        .jinghualeft div:nth-child(1) {
+            background: url(../images/common/jinghuaimg1.png);
+        }
+
+        .jinghualeft div:nth-child(2) {
+            background: url(../images/common/jinghuaimg2.png) no-repeat;
+        }
+
+        .jinghualeft div:nth-child(3) {
+            background: url(../images/common/jinghuaimg3.png) no-repeat;
+        }
+
+        .jinghualeft div:nth-child(1):hover {
+            background: url(../images/common/jinghuaimg11.png) no-repeat;
+        }
+
+        .jinghualeft div:nth-child(2):hover {
+            background: url(../images/common/jinghuaimg22.png) no-repeat;
+        }
+
+        .jinghualeft div:nth-child(3):hover {
+            background: url(../images/common/jinghuaimg33.png) no-repeat;
+        }
+        /* 右部分 */
+        .jinghuaright {
+            float: left;
+            width: 500px;
+        }
+        /* 右部分小盒子样式 */
+        .jinghuaright div {
+            cursor: pointer;
+            margin: 26px 0 0 149px;
+            width: 160px;
+            height: 160px;
+            background: url(../images/common/jinghuaimg4.png) no-repeat;
+        }
+        /* 经过 更改图片 */
+        .jinghuaright div:hover {
+            background: url(../images/common/jinghuaimg44.png) no-repeat;
+        }
+
+        .xinrenbaodian .zizhuheader:nth-child(1) {
+            background: url(../images/common/xinrenbaodian.png) no-repeat;
+            margin-bottom: 8px;
+        }
+
+        .xinrenbaodian .zizhuheader:nth-child(3) {
+            background: url(../images/common/changjianwenti.png) no-repeat;
+
+        }
+        /* 开启王者之路图片 */
+        .kaiqiwangzhe {
+            width: 1000px;
+            height: 167px;
+            margin-top: 8px;
+            position: relative;
+            background: url(../images/common/kaiqiwangzhe.jpg) no-repeat;
+            margin-bottom: 40px;
+        }
+        /* 超链接 */
+        .kaiqiwangzhe a {
+            display: block;
+            background: url(../images/common/zizhufuwujinglingtu.png) 0 -404px;
+            width: 214px;
+            height: 64px;
+            top: 60px;
+            right: 86px;
+            position: absolute;
+        }
+        /* bug反馈图片 大图 */
+        .bugfankui {
+            width: 1000px;
+            height: 167px;
+            margin-top: 40px;
+            position: relative;
+            background: url(../images/common/bugfankui.jpg) no-repeat;
+            margin-bottom: 40px;
+        }
+        /* 超链接 */
+        .bugfankui a {
+            display: block;
+            background: url(../images/common/zizhufuwujinglingtu.png) 0 -468px;
+            width: 214px;
+            height: 64px;
+            top: 60px;
+            right: 86px;
+            position: absolute;
+        }
+        /* 搜索图标 */
+        .search {
+            background-color: transparent;
+            position: relative;
+            margin-bottom: 17px;
+        }
+        /* 文本框样式 */
+        .search input {
+            background: transparent;
+            display: block;
+            width: 100%;
+            color: #979797;
+            border: 1px solid #d1d1d1;
+            height: 46px;
+            font-size: 14px;
+            /* position: relative; */
+            padding: 1px 0;
+            padding-left: 20px;
+        }
+        /* 设置搜索图标 */
+        .search::after {
+            cursor: pointer;
+            content: "";
+            display: block;
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            width: 44px;
+            height: 44px;
+            background: url(../images/common/zizhufuwujinglingtu.png) 0 -1383px;
+            background-color: pink;
+        }
+        /* 换个话题的标签 */
+        .changewenti .changewentibtn {
+            display: block;
+            float: right;
+            padding-right: 24px;
+            font-size: 14px;
+            color: #747474;
+            cursor: pointer;
+        }
+        /* 改变问题 元素的样式 */
+        .changewenti {
+            position: relative;
+        }
+        /* 放置小图片 */
+        .changewentibtn::after {
+            content: "";
+            display: block;
+            width: 13px;
+            height: 13px;
+            right: 0px;
+            top: 5px;
+            position: absolute;
+            background: url(../images/common/zizhufuwujinglingtu.png) 0 -1431px;
+        }
+        /* 问题中的小问题 */
+        .smallproblem {
+            cursor: pointer;
+            border: 1px solid #d1d1d1;
+            margin-bottom: 11px;
+        }
+        /* 小问题的头部 */
+        .smallproblemtop {
+            width: 100%;
+            height: 38px;
+            line-height: 38px;
+            text-indent: 20px;
+            font-size: 18px;
+            color: #2a6fa3;
+            position: relative;
+            z-index: 10;
+        }
+        /* 小问题的尾部 */
+        .smallproblembottom {
+            font-size: 16px;
+            line-height: 24px;
+            color: #636363;
+            padding: 15px 0 15px;
+            width: 900px;
+            margin: 0 auto;
+            text-align: left;
+            border-top: 1px solid #e4e4e4;
+        }
+        /* 结尾部分上层 */
+        .footertop {
+            text-align: center;
+            border-top-width: 1px;
+            border-top-style: solid;
+            background-color: #094177;
+        }
+
+        /* 结尾部分中心 */
+        .footertop .footertoparticle {
+            position: relative;
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        /* 结尾部分中心 盒子样式 */
+        .footertoparticle div {
+            position: relative;
+            margin-left: 80px;
+            margin-top: 88px;
+            float: left;
+            font-size: 14px;
+            width: 172px;
+            height: 172px;
+            background: url(../images/common/zizhufooterjinglingtu.png) no-repeat 0 -380px;
+        }
+        /* 颜色不同 */
+        .footertoparticle div:nth-child(3) {
+            width: 220px;
+            background: none;
+            color: #5591cb;
+            margin-top: 40px;
+            font-size: 18px;
+            margin-left: 56px;
+        }
+        /* 图片设置 */
+        .footertoparticle div:nth-child(3) img {
+            width: 154px;
+            height: 155px;
+            color: #5591cb;
+            border-width: 6px;
+            border-style: solid;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .footertoparticle div:nth-child(4) {
+            margin-left: 56px;
+        }
+
+        .footertoparticle div:first-child {
+            margin-left: 8px;
+        }
+        /* 尾部部分连接的颜色 */
+        .footertoparticle a {
+            display: block;
+            width: 100%;
+            color: #fff;
+        }
+        /* 鼠标触碰颜色改变 */
+        .footertoparticle a:hover {
+            color: #999;
+        }
+        /* 第一个不同加粗 */
+        .footertoparticle div a:first-child {
+            padding-top: 40px;
+            font-size: 26px;
+            font-weight: 700;
+            color: #89c5ff;
+        }
+
+        .footertoparticle div a:first-child:hover {
+            color: white;
+        }
+        /* 缓慢出现 */
+        .footertoparticle div:nth-child(-n+2) {
+            transition: transform .4s ease-in-out;
+        }
+        /* 缓慢 */
+        .footertoparticle div:nth-child(n+4) {
+            transition: transform .4s ease-in-out;
+        }
+        /* 除了中间的二维码 */
+        .footertoparticle div:nth-child(-n+2):hover {
+            background-position: 0 -552px;
+            transform: translateY(-3px);
+        }
+
+        .footertoparticle div:nth-child(n+4):hover {
+            background-position: 0 -552px;
+            transform: translateY(-3px);
+        }
+        /* 下层空隙 */
+        .footerbottom {
+            background: #031028;
+            text-align: center;
+            font-size: 12px;
+            line-height: 24px;
+            position: relative;
+        }
+        /* 底层 */
+        .footer {
+            width: 1100px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+        /* 底层段落 */
+        .footer p {
+            color: #8db2e1;
+        }
+        /* 底层链接 */
+        .footer p a {
+            color: #8db2e1;
+        }
+        /* 鼠标经过出现下划线 */
+        .footer p a:hover {
+            text-decoration: underline;
+        }

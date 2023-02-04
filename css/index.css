@@ -1,0 +1,1868 @@
+        /* header部分开始-------------------------------------------- 
+        header部分开始--------------------------------------------- */
+
+        /* 头部区域样式 */
+        .header {
+            width: 1000px;
+            height: 42px;
+            font-size: 0px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* 腾讯logo样式 */
+        .txyxlogo {
+            display: inline-block;
+            margin-left: 10px;
+            width: 150px;
+            height: 41px;
+            background: url(../images/common/tengxunyouxilogo2.png) no-repeat center center;
+            background-size: 101px 100px;
+            position: relative;
+            z-index: 99;
+        }
+
+        /* logo后广告 */
+        .logoafter {
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+
+        /* 点击logo产生的大广告 */
+        .shouyeshangcengdatu {
+            position: absolute;
+            top: 0px;
+            left: 12px;
+            display: none;
+            z-index: 100;
+        }
+
+        /* 点击小广告产生大广告 */
+        .logoafter:hover .shouyeshangcengdatu {
+            display: block;
+        }
+
+        /* header右部分样式 */
+        .headerright {
+            width: 275px;
+            float: right;
+        }
+
+        /* header右半部分的a标签样式 */
+        .headerright>a {
+            display: inline-block;
+            font-size: 14px;
+            height: 42px;
+            line-height: 41px;
+        }
+
+        /* header右部分第一个a标签与第二个的距离 */
+        .headerright>a:first-child {
+            z-index: 3;
+            margin-right: 20px;
+        }
+
+        /* header右部分第一个a标签鼠标经过改变颜色 */
+        .headerright>a:first-child:hover {
+            color: rgb(255, 138, 87);
+        }
+
+        /* .headerright a:first-child:hover .headerpaihang {
+            display: block;
+        } */
+
+        /* 添加链接的背景图片 添加此类前面出现绿色圆圈 */
+        .lvseyuanquan::after {
+            content: '';
+            background: url(../images/common/title_sprite.png);
+            background-position: -30px 0;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            left: 5px;
+            position: absolute;
+        }
+
+        .lvseyuanquan {
+            position: relative;
+            padding-left: 34px;
+        }
+
+        /* 添加链接的背景图片 添加此类后面出现箭头 */
+        .xiahuisejiantou::after {
+            content: '';
+            background: url(../images/common/title_sprite.png);
+            background-position: 0 0;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            right: 3px;
+            position: absolute;
+            opacity: .1;
+            transform: rotate(90deg);
+        }
+
+        .xiahuisejiantou {
+            position: relative;
+            padding-right: 29px;
+        }
+
+        /* header右侧大排行榜 */
+        .headerpaihang {
+            width: 707px;
+            height: 580px;
+            position: absolute;
+            top: 42px;
+            right: 18px;
+            background-color: #fff;
+            display: none;
+            animation: chuxian 0.4s linear;
+            z-index: 101;
+            cursor: default;
+        }
+
+        /* 触摸激发排行榜 */
+        .headerright>a:last-child:hover .headerpaihang {
+            display: block;
+        }
+
+        /* 调节小li的上下外边距 大小 */
+        .headerpaihang ul li {
+            position: relative;
+            width: 200px;
+            /* height: 90px; */
+            margin-bottom: 24px;
+        }
+
+        /* 大排行榜缓慢出现 */
+        @keyframes chuxian {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 制造一个假的盒子 用于监听大盒子 */
+        /* .jiadehezi {
+            width: 707px;
+            height: 622px;
+            position: absolute;
+            top: 0px;
+            right: 278px;
+            z-index: 1;
+        } */
+
+        /* 调节每个排行榜之间的间距 */
+        .headerpaihang .oneheaderpaihang {
+            float: left;
+        }
+
+        /* 第一列空隙更大 */
+        .headerright .headerpaihang .oneheaderpaihang:nth-child(1) {
+            margin-left: 35px;
+        }
+
+        /* .headerpaihang .oneheaderpaihang:last-child {
+            margin-left: 0px;
+            float: right;
+        } */
+
+        /* 第三个中间出现了p标签 对他单独赋予样式 */
+        .headerpaihang .oneheaderpaihang:last-child ul li:nth-child(5) p {
+            padding-left: 0px;
+            width: 224px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+        }
+
+        /* 头部排行榜说明 */
+        .headerpaihang .oneheaderpaihang>p {
+            width: 224px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+        }
+
+        /* 改变小li中的p */
+        .headerpaihang .oneheaderpaihang ul li>p {
+            color: black;
+            font-size: 12px;
+            line-height: 16px;
+            padding-left: 22px;
+        }
+
+        /* 让图片撑满盒子 */
+        .headerpaihang .oneheaderpaihang ul li img {
+            width: 200px;
+            height: 90px;
+        }
+
+        .headerpaihang .oneheaderpaihang ul li div a:hover {
+            color: white;
+        }
+
+        /* 右灰色箭头 */
+        .youhuisejiantou::after {
+            content: '';
+            background: url(../images/common/title_sprite.png);
+            background-position: 0 0;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            right: 35px;
+            position: absolute;
+            opacity: .1;
+        }
+
+        .youhuisejiantou {
+            position: relative;
+        }
+
+
+
+        /* 将自身变成灰色和红色的正方形的排名 */
+        .huiseorder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            color: #fff;
+            background-color: #ccc;
+        }
+
+        .hongseorder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            color: #fff;
+            background-color: rgb(198, 40, 40);
+        }
+
+        /* 进入官网和进入游戏的整个大盒子 */
+        .paihangbigblack {
+            position: absolute;
+            width: 100%;
+            height: 28px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            bottom: 0;
+            left: 0;
+            display: none;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* 黑色盒子里面的两部分小a */
+        .oneheaderpaihang .paihangbigblack .paihangsmallblack {
+            padding: 0;
+            float: left;
+            width: 50%;
+            font-size: 14px;
+            line-height: 28px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* 主页大背景图片 */
+        /* 主页背景图片====================================================== */
+        .zhuyebeijing {
+            position: absolute;
+            width: 100%;
+            height: 1100px;
+            margin: 0 auto;
+            background: url(../images/common/zhuyebeijing.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            z-index: -1;
+        }
+
+        /* 主页大背景图片 */
+        /* 主页背景图片===================================== */
+
+
+
+        /* header部分结束-----------------------------------------------
+        header部分结束------------------------------------------------
+        header部分结束-------------------------------------------------
+        header部分结束--------------------------------------------------- */
+
+
+
+
+        /* nav导航栏样式开始 */
+
+        /* 黑色长条 */
+        .nav {
+            position: absolute;
+            left: 0;
+            top: 42px;
+            width: 100%;
+            min-width: 1300px;
+            height: 84px;
+            z-index: 99;
+            background: #000;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* nav框架 */
+        .nav .navinner {
+            width: 1300px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* 王者荣耀图标 */
+        .wangzherongyao {
+            position: absolute;
+            left: 0;
+            top: 16px;
+            background: url(../images/common/wangzherongyaologo2.png) no-repeat center center;
+            width: 200px;
+            height: 54px;
+            overflow: hidden;
+        }
+
+        /* nav主体部分 */
+        .navcaidan {
+            width: 1120px;
+            padding-left: 230px;
+        }
+
+        /*  nav菜单部分 上层a标签*/
+        .navcaidan a {
+            display: block;
+            width: 110px;
+            height: 64px;
+            padding: 20px 0 0;
+            color: #c9c9dd;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        /* 将小li浮动 */
+        .navcaidan li {
+            float: left;
+            width: 115px;
+            height: 84px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* 每个小li下面的文字 */
+        .navcaidan li p {
+            width: 100%;
+            height: 12px;
+            font-size: 12px;
+            color: #858792;
+            text-align: center;
+            line-height: 0px;
+            text-indent: -6px;
+        }
+
+        /* 搜索按钮的宽度减小 */
+        .navcaidan li:last-child {
+            width: 38px;
+        }
+
+        /* 搜索按钮背景图片 */
+        .navcaidan li:last-child a {
+            display: block;
+            width: 27px;
+            height: 26px;
+            background: url(../images/common/sousuo.png);
+            margin: 29px auto 0;
+            padding: 0;
+        }
+
+        /* 触碰到nav菜单的小li  被触碰的 改变颜色和 边框 */
+        .navinner .navcaidan li:hover {
+            border-bottom: 5px solid rgb(243, 194, 88);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(243, 194, 88, .2));
+        }
+
+        .navinner .navcaidan li:hover a {
+            color: rgb(243, 194, 88);
+        }
+
+        .navinner .navcaidan li:hover p {
+            color: rgb(145, 118, 63);
+        }
+
+        /* 登陆部分 */
+        .navinner .login {
+            position: absolute;
+            right: 0px;
+            top: 21px;
+            width: 182px;
+        }
+
+        /* 登录人头像 */
+        .login a:nth-child(1) {
+            display: block;
+            float: left;
+            width: 44px;
+            height: 44px;
+            margin-right: 7px;
+            background: url(../images/common/rentou.png) center center;
+            background-size: 44px 44px;
+            border: 1px solid rgb(243, 194, 88);
+            border-radius: 50%;
+        }
+
+        /* 登录按键 */
+        .login a:nth-child(2) {
+            font-size: 16px;
+            color: white;
+        }
+
+        /* 查看战绩 */
+        .login p:last-child {
+            font-size: 14px;
+            color: #858792;
+        }
+
+        .erjinav {
+            position: absolute;
+            top: 83px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 3;
+            transition: height 0.3s ease;
+            overflow: hidden;
+            height: 0;
+            /* height: 285px; */
+        }
+
+        .erjinav .erjicaidan {
+            width: 940px;
+            height: 285px;
+            margin: 0 auto;
+            overflow: hidden;
+            zoom: 1;
+            padding-top: 15px;
+            padding-bottom: 30px;
+            padding: 15px 0 30px 50px;
+        }
+
+        /* 二级菜单出现!! */
+        .nav:hover .erjinav {
+            height: 285px;
+        }
+
+        /* 二级nav的小li */
+        .erjinav .erjicaidan li {
+            float: left;
+            display: inline;
+            width: 115px;
+            padding: 2px 2.5px 0;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* 二级标题文字颜色 */
+        .erjinav .erjicaidan li a {
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            padding: 0;
+            font-size: 14px;
+            color: #c9c9dd;
+        }
+
+        /* 经过二级菜单的a出现变化 */
+        .erjinav .erjicaidan li a:hover {
+            text-decoration: underline;
+            color: rgb(243, 194, 88);
+        }
+
+        /* 出现红色的N红点 */
+        .hongdianN {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -137px -68px;
+            overflow: hidden;
+        }
+
+        /* 出现红色的H红点 */
+        .hongdianH {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -163px -68px;
+            overflow: hidden;
+        }
+
+        /* 出现绿色的圆圈 */
+        .lvdian {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -136px -5px;
+            overflow: hidden;
+        }
+
+
+        /* 主体部分  --------------*/
+        /* 主页部分开始      ============= ==============================*/
+        .main {
+            padding-top: 540px;
+            width: 1200px;
+            /* height: 1200px; */
+            margin: 0 auto;
+        }
+
+        /* 主题层广告 */
+        .topmain {
+            width: 1200px;
+            height: 342px;
+            background: url(../images/common/topmainbgc.png) no-repeat left top;
+            position: relative;
+
+        }
+
+        /* 轮播图盒子 */
+        .lunbotubigbox {
+            width: 605px;
+            padding-right: 1px;
+            height: 342px;
+            float: left;
+            position: relative;
+            background: #000;
+            overflow: hidden;
+        }
+
+        /* 轮播图 */
+        .lunbotu {
+            position: absolute;
+            width: 604px;
+            height: 298px;
+            left: 0;
+            top: 0;
+        }
+
+        /* 轮播图装a的容器 */
+        .lunbotu a {
+            /* display: block;
+            float: left; */
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* background: #0e97dc; */
+        }
+
+        /* 轮播图片 */
+        .lunbotu img {
+            width: 100%;
+            height: 100%;
+            /* position: absolute;
+            top: 0;
+            left: 0; */
+        }
+
+        /* 轮播图下 控制按钮 */
+        .lunbotubtn {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 604px;
+            height: 44px;
+            z-index: 2;
+        }
+
+        /* 控制按钮 */
+        .lunbotubtn a {
+            width: 120.8px;
+            height: 44px;
+            line-height: 44px;
+            display: block;
+            float: left;
+            font-size: 14px;
+            text-align: center;
+            color: #b1b2be;
+            cursor: pointer;
+        }
+
+        /* 热门公告部分 */
+        .remengonggao {
+            width: 359px;
+            height: 343px;
+            overflow: hidden;
+            padding: 0 17px;
+            float: left;
+        }
+
+        /* 调节 ...  的样式 */
+        .remengonggao>span {
+            display: block;
+            width: 60px;
+            height: 49px;
+            line-height: 40px;
+            float: right;
+            font-size: 15px;
+            text-indent: 19px;
+        }
+
+        /* 改变链接的颜色 */
+        .remengonggao a {
+            color: #B8B9C5;
+        }
+
+        /* 控制热门的btn */
+        .remengonggaobtn {
+            height: 49px;
+            border-bottom: 1px solid #000;
+        }
+
+        /* 公告上层的a */
+        .remengonggaobtn a {
+            display: block;
+            float: left;
+            width: 52px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 45px;
+            height: 48px;
+            padding-bottom: 3px;
+            color: #B8B9C5;
+        }
+
+        /* 大公告盒子 */
+        .xiaohezi {
+            overflow: hidden;
+            width: 325px;
+        }
+
+        .gonggaobox {
+            width: 500%;
+            /* transform: translate(-20%, 0px) */
+        }
+
+        .gonggaolan {
+            float: left;
+            width: 20%;
+        }
+
+        /* 公告上层标题 */
+        .gonggaolan>p {
+            width: 324px;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 15px;
+            line-height: 36px;
+            font-size: 18px;
+            margin-top: 18px;
+            margin-bottom: 11px;
+            background: #414046;
+        }
+
+        /* 改变标题颜色 */
+        .gonggaolan>p a {
+            color: #f3c258;
+        }
+
+        /* 公告栏内容 */
+        .gonggaolan ul {
+            width: 325px;
+        }
+
+        /* 公告栏信息 */
+        .gonggaolan ul li {
+            width: 100%;
+            height: 20.8px;
+            margin-bottom: 11px;
+
+        }
+
+        /* 每行的小a */
+        .gonggaolan ul li a {
+            color: #b8b9c5;
+            font-size: 14px;
+        }
+
+        /* 公告信息  黄色和红色等等*/
+        /* 黄色边框和颜色 */
+        .huangsegonggao {
+            width: 34px;
+            height: 18px;
+            color: #f4be19;
+            margin-right: 2px;
+            font-size: 12px;
+            display: inline-block;
+            line-height: 16px;
+            border: 1px solid #f4be19;
+            vertical-align: top;
+            margin-top: 2px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        /* 红色边框 和颜色 */
+        .hongsegonggao {
+            width: 34px;
+            height: 18px;
+            color: #ff3636;
+            margin-right: 2px;
+            font-size: 12px;
+            display: inline-block;
+            line-height: 16px;
+            border: 1px solid #ff3636;
+            vertical-align: top;
+            margin-top: 2px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        /* 浅蓝色边框 和颜色 */
+        .qianlansegonggao {
+            width: 34px;
+            height: 18px;
+            color: #1E96AB;
+            margin-right: 2px;
+            font-size: 12px;
+            display: inline-block;
+            line-height: 16px;
+            border: 1px solid #1E96AB;
+            vertical-align: top;
+            margin-top: 2px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        /* 蓝色边框 和颜色 */
+        .lansegonggao {
+            width: 34px;
+            height: 18px;
+            color: #4d9cff;
+            margin-right: 2px;
+            font-size: 12px;
+            display: inline-block;
+            line-height: 16px;
+            border: 1px solid #4d9cff;
+            vertical-align: top;
+            margin-top: 2px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        /* 公告时间 */
+        .gonggaoshijian {
+            display: block;
+            float: right;
+            width: 34px;
+            height: 18px;
+            color: #999999;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 1px;
+            text-align: center;
+        }
+
+        /* maintou右部分 */
+        .mainright {
+            float: left;
+            width: 236px;
+            height: 342px;
+            position: relative;
+        }
+
+        /* 下载游戏 */
+        .mainright a:nth-child(1) {
+            display: block;
+            width: 236px;
+            height: 128px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat 0 -219px;
+        }
+
+        /* 对局环境 */
+        .mainright a:nth-child(2) {
+            display: block;
+            width: 236px;
+            height: 106px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat 0 -350px;
+        }
+
+        /* 体验中心 */
+        .mainright a:nth-child(3) {
+            display: block;
+            width: 236px;
+            height: 108px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat 0 -461px;
+        }
+
+        /* 右边提醒小窗口 */
+        .tixing {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -58px;
+            width: 53px;
+            height: 68px;
+            background: url(../images/common/tixing.png);
+        }
+
+        /* 四张连接图片 maintoubottom */
+        .maintopbottom {
+            width: 100%;
+            height: 134px;
+            margin: 28px auto 34px;
+            overflow: hidden;
+        }
+
+        .maintopbottom a {
+            display: inline-block;
+            width: 291px;
+            height: 134px;
+            margin-right: 8.4px;
+            overflow: hidden;
+        }
+
+        .maintopbottom a:last-child {
+            margin-right: 0px;
+        }
+
+        /* 设置动画效果 */
+        .maintopbottom a img {
+            transition: transform 0.4s ease;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 鼠标触碰放大图片 */
+        .maintopbottom a:hover img {
+            transform: scale(1.2);
+        }
+
+        /* 内容中心部分样式开始====================================== ========*/
+        /* 内容中心部分下方间隔 */
+        .neirongzhongxin {
+            margin-bottom: 28px;
+        }
+
+        /* 内容中心左半部分 */
+        .neirongzhongxin .neirongleft {
+            float: left;
+            width: 872px;
+            height: 528px;
+            margin-right: 33px;
+        }
+
+        /* 主体部分每个盒子的头部部分 =\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+        /* 主体部分盒子头部 */
+        .boxheader {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        /* 主体部分盒子头部的标题 */
+        .boxheadertitle {
+            color: #323235;
+            font-size: 22px;
+            line-height: 25px;
+            text-indent: 33px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* 主体部分盒子头部右方更多 */
+        .morea {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 14px;
+            padding-left: 22px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -252px 4px;
+            color: #999;
+        }
+
+        /* 主体部分每个盒子的头部部分 =\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+        /* 内容区域 左半部图片部分及标题 */
+        .neirongleft .boxheadertitle {
+            width: 140px;
+            height: 26px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat 0 -106px;
+        }
+
+        /* 内容区域导航栏 */
+        .neirongnav {
+            width: 872px;
+            height: 32px;
+            line-height: 29px;
+            background: #f5f5f5;
+            margin-bottom: 5px;
+            border-bottom: none;
+        }
+
+        /* 内容区域导航栏每块的属性 */
+        .neirongnav a {
+            width: 289px;
+            display: block;
+            float: left;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            border-bottom: 3px solid #f5f5f5;
+        }
+
+        /* 经过每块的变化 */
+        /* .neirongnav a:hover {
+            border-bottom: 3px solid #f3c258;
+            color: #333333;
+        } */
+
+        /* 将自身变为| */
+        .split {
+            width: 1px;
+            height: 20px;
+            overflow: hidden;
+            float: left;
+            background: #e1e1e1;
+            display: block;
+            margin: 5px 0 0px;
+        }
+
+
+
+        /* 标题行 */
+        .neirongnavbiaoti {
+            position: relative;
+            zoom: 1;
+            height: 43px;
+            line-height: 26px;
+            padding: 8px 0 9px;
+        }
+
+        /* 标题行中 */
+        .neirongnavbiaoti .biaoti {
+            height: 26px;
+            overflow: hidden;
+            text-indent: 8px;
+            cursor: pointer;
+        }
+
+        /* 单个标题 */
+        .neirongnavbiaoti .biaoti a {
+            height: 24px;
+            line-height: 24px;
+            padding: 0 13px 0 8px;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            background: #f5f5f5;
+            font-size: 14px;
+            color: #333;
+            margin-right: 8px;
+            display: block;
+            float: left;
+        }
+
+        /* 触碰标题 */
+        /* .neirongnavbiaoti .biaoti a:hover {
+            border-color: #f3c258;
+            background: #f3c258;
+            color: #fff;
+        } */
+
+        /*  内容中心主体部分*/
+        /* 内容中心article部分 */
+
+        /* 每一个小视频及下面的文字 相对定位用于阴影 */
+        .neirongarticlebottom li {
+            float: left;
+            width: 209px;
+            margin: 0 12px 30px 0;
+            position: relative;
+        }
+
+        /* 每行最后一个没有右边距 */
+        .neirongarticlebottom li:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        /* 小li里面的整个模块  */
+        .neirongarticlebottom a {
+            color: #363636;
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+
+        /* 视频封面 */
+        .neirongarticlebottom img {
+            width: 100%;
+            height: 125px;
+        }
+
+        /* 视频介绍 */
+        .neirongarticlebottom li p {
+            font-size: 14px;
+            display: block;
+            height: 40px;
+            overflow: hidden;
+            color: #333333;
+            margin-top: 10px;
+        }
+
+        /* 整个界面缓缓出现 */
+        .neirongzhongxinarticle {
+            animation: manmanchuxian .5s ease-in-out;
+        }
+
+        /* 小界面缓缓出现 */
+        .neirongarticlebottom {
+            animation: manmanchuxian .5s ease-in-out;
+        }
+
+        /* 视频下面播放量和时间 */
+        .neirongarticlebottom .bofangliang {
+            position: absolute;
+            top: 104px;
+            left: 0;
+            width: 100%;
+            height: 22px;
+            line-height: 22px;
+            padding: 0 10px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            font-size: 12px;
+            border-radius: 0 0 2px 2px;
+        }
+
+        .bofangliang span:nth-child(2) {
+            float: right;
+        }
+
+        /* 慢慢出现的动画 */
+        @keyframes manmanchuxian {
+            0% {
+                display: none;
+                opacity: 0;
+            }
+
+            1% {
+                display: block;
+                opacity: 0;
+            }
+
+            100% {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        /* 隐藏的影音 */
+        .yinying {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 125px;
+            top: 0px;
+            left: 0px;
+            opacity: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+            animation: manmanchuxian 0.4s ease-in-out;
+            display: none;
+        }
+
+        /* 中间播放的小图标 */
+        .bofangcenter {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 40px auto 0;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -192px -64px;
+        }
+
+        /* 经过大盒子阴影浮现 */
+        .neirongarticlebottom li:hover .yinying {
+            display: block;
+        }
+
+        /* 左下灰色播放按钮 */
+        .zuoxiahuise {
+            padding-left: 15px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -256px -62px;
+        }
+
+        /* 内容区域 右半部图片部分及标题 */
+        .neirongright {
+            float: left;
+            width: 295px;
+            height: 528px;
+        }
+
+        .neirongright .boxheadertitle {
+            width: 140px;
+            height: 26px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat 0 -144px;
+        }
+
+        /* 内容区域导航栏 */
+        .yingxiongnav {
+            width: 293px;
+            height: 32px;
+            line-height: 29px;
+            background: #f5f5f5;
+            margin-bottom: 19px;
+            border-bottom: none;
+        }
+
+        /* 内容区域导航栏每块的属性 */
+        .yingxiongnav a {
+            width: 97px;
+            display: block;
+            float: left;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            border-bottom: 3px solid #f5f5f5;
+        }
+
+
+
+        /* 经过每块的变化 */
+        /* .yingxiongnav a:hover {
+            border-bottom: 3px solid #f3c258;
+            color: #333333;
+        } */
+
+        /* 英雄轮播大盒子 */
+        .yingxionglunbobox {
+            overflow: hidden;
+        }
+
+        .yingxionglunbo {
+            width: 300%;
+        }
+
+        /* 制作大盒子进行轮播 */
+        .yingxionglunbo>div {
+            width: 33.3%;
+            float: left;
+        }
+
+        .yingxionglunbo div:nth-child(2) {
+            margin-left: 0.2px;
+            margin-right: 0.7px;
+        }
+
+        .yingxionglunbo div:nth-child(3) p {
+            color: #999999;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .yingxionglunbo div:nth-child(3) p span:first-child {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 4px;
+            vertical-align: middle;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -256px -43px;
+        }
+
+        /* 盒子上部新英雄 */
+        .yingxionglunbo .newhero {
+            display: block;
+            width: 294px;
+            height: 224px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* 新英雄图片 */
+        .newhero>a img {
+            width: 295px;
+            height: 156px;
+        }
+
+        /* 图片下文字介绍 */
+        .yingxionglunbo .newhero .heroduce {
+            padding: 10px 15px;
+            height: 67px;
+            border: 1px solid #e5e5e5;
+            border-top: none;
+            border-radius: 0 0 2px 2px;
+        }
+
+        /* 介绍的第一行 */
+        .heroduce>p:nth-child(1) {
+            font-size: 18px;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        /* 介绍的第二行 */
+        .heroduce>p:nth-child(2) {
+            color: #999999;
+            font-size: 12px;
+        }
+
+        /* 盒子底层的英雄 */
+        .yingxiongbottom a {
+            display: block;
+            float: left;
+            position: relative;
+            width: 68px;
+            height: 173px;
+            margin: 0 7px 12px 0;
+            cursor: pointer;
+        }
+
+        /* 防止挤开最后一个 */
+        .yingxiongbottom a:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        /* 撑满盒子 */
+        .yingxiongbottom a img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 英雄的名字 */
+        .heroname {
+            width: 34px;
+            height: 100%;
+            line-height: 16px;
+            color: #f3c258;
+            position: absolute;
+            top: 0px;
+            left: 26px;
+            text-align: center;
+            font-size: 14px;
+            writing-mode: vertical-lr;
+            letter-spacing: 0.3em;
+            display: none;
+        }
+
+        /* 英雄名字缓缓出现 */
+        .yingxiongbottom a .heroname {
+            animation: manmanchuxian 0.5s ease-in-out;
+        }
+
+        /* 鼠标经过图片英雄名字显现 */
+        .yingxiongbottom a:hover .heroname {
+            display: block;
+        }
+
+        /* 黑色阴影 */
+        .blackyinying {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.88);
+            width: 68px;
+            height: 173px;
+        }
+
+        /* 触摸英雄阴影出现 */
+        .yingxiongbottom a:hover .blackyinying {
+            display: block;
+        }
+
+        /* 阴影缓缓出现 */
+        .yingxiongbottom a .blackyinying {
+            animation: manmanchuxian .5s ease-in-out;
+        }
+
+        /* 内容中心部分样式结束==================================================*/
+
+        /* 赛事中心样式开始=============================================== */
+        /* 赛事区域 左半部图片部分及标题 */
+        .saishizhongxin {
+            margin-bottom: 40px;
+        }
+
+        .saishileft {
+            width: 872px;
+            margin-right: 33px;
+            float: left;
+        }
+
+        .saishileft .boxheader {
+            width: 100%;
+
+        }
+
+        .saishileft .boxheadertitle {
+            width: 140px;
+            height: 26px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat 0 -184px;
+        }
+
+        /* 赛事区域导航栏 */
+        .saishinav {
+            width: 872px;
+            height: 32px;
+            line-height: 29px;
+            background: #f5f5f5;
+            margin-bottom: 16px;
+            border-bottom: none;
+        }
+
+        /* 赛事区域导航栏每块的属性 */
+        .saishinav a {
+            /*  width: 289px; */
+            padding: 0 27px;
+            display: block;
+            float: left;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            border-bottom: 3px solid #f5f5f5;
+        }
+
+        /* 切换界面慢慢出现 */
+        .saishiarticle {
+            animation: manmanchuxian 0.5s ease-in-out;
+        }
+
+        /* 赛事上半部与下半部的间隙 */
+        .saishiarticletop {
+            margin-bottom: 15px;
+        }
+
+        /* 赛事区域内容区部分 */
+        .saishiarticle>div:first-child>div:first-child a {
+            width: 211px;
+            height: 260px;
+            display: block;
+            float: left;
+            margin-right: 19px;
+        }
+
+        /* 赛事内容区域大图片 */
+        .saishiarticle>div:first-child>div:first-child a img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 赛事内容区域列表 */
+        .saishiarticle .saishiarticleyou ul:nth-child(3) {
+            width: 630px;
+            float: left;
+        }
+
+        /* 赛事内容部分列表每行 */
+        .saishiarticle .saishiarticleyou ul:nth-child(3) li {
+            margin-bottom: 9px;
+            overflow: hidden;
+        }
+
+        /* 列表项每行文字内容 */
+        .saishiarticle .saishiarticleyou ul:nth-child(3) li a {
+            float: left;
+            font-size: 14px;
+            width: 470px;
+            color: #333;
+        }
+
+        /* 列表前的灰色小标题 */
+        .saishihuisexiaobiaoti {
+            display: block;
+            float: left;
+            font-size: 12px;
+            width: 48px;
+            height: 23px;
+            line-height: 19px;
+            margin-right: 12px;
+            background: #e3e3e3;
+            border-radius: 10px;
+            border: 2px solid #e3e3e3;
+            text-align: center;
+            color: #999999;
+        }
+
+        /* 赛事内容区域时间 */
+        .saishishijian {
+            float: right;
+            font-size: 12px;
+            color: #b8b9c5;
+        }
+
+        /* 第一个标题 */
+        .saishiarticleyou>a:nth-child(1) {
+            width: 576px;
+            float: left;
+            color: #333;
+            font-size: 24px;
+        }
+
+        /* 触碰标题出现下划线 */
+        .saishiarticleyou>a:nth-child(1):hover {
+            text-decoration: underline;
+        }
+
+        /* 第二个小标题 */
+        .saishiarticleyou>a:nth-child(2) {
+            width: 576px;
+            float: left;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        /* 赛事内容区域的小li触碰后出现下划线 */
+        .saishiarticleyou ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* 视频中心与上端一段距离 */
+        /* .saishiarticlebottom {
+            padding-top: 20px;
+        } */
+
+        /* 赛事区域右半部分 */
+
+        .saishiright {
+            width: 295px;
+            float: left;
+        }
+
+        .saishiright .boxheadertitle {
+            width: 140px;
+            height: 26px;
+            background: url(../images/common/zhuyejinglingtu.png) no-repeat -157px -106px;
+        }
+
+        .i .saishiright .morea:hover {
+            color: rgb(243, 194, 88);
+        }
+
+        /* 购票 */
+        .goupiao {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            right: 68px;
+            padding-left: 22px;
+            color: #323235;
+            width: 70px;
+            height: 22px;
+            border-radius: 3px;
+            box-sizing: border-box;
+            text-indent: 10px;
+            line-height: 19px;
+            border: 1px solid #f3c258;
+            background: url(../images/common/zhuyejinglingtu.png)no-repeat -243px -85px;
+        }
+
+        /* 赛程nav */
+        .saichengnav {
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            background-color: #f5f5f5;
+        }
+
+        .saichengnav span {
+            float: left;
+            width: 83px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            line-height: 32px;
+        }
+
+
+
+        .saishiright .saichengnav span:nth-child(3) {
+            float: left;
+            width: 43px;
+            height: 100%;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            line-height: 32px;
+        }
+
+
+
+        /* 赛事中心样式结束=============================================== */
+
+        /* 首页前往查看 */
+        .qianwangchakan {
+            display: block;
+            width: 260px;
+            height: 80px;
+            position: absolute;
+            top: 478px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* background-color: pink; */
+            /* z-index: 100; */
+        }
+
+        /* ------------------------------------------------------------ */
+
+        /* 内容中心第三块 */
+        /* .heros {
+                        position: relative;
+                    } */
+        /* 选择英雄 */
+        .choosehero {
+            position: relative;
+            color: #323235;
+            text-indent: 8px;
+            font-size: 14px;
+            display: inline-block;
+            padding-right: 20px;
+            background: url(../images/common/huangsexiajiantou.png) no-repeat right center;
+        }
+        /* 大盒子 */
+        .yingxiongbox {
+            position: absolute;
+            z-index: 11;
+            top: 27px;
+            left: 0px;
+            background-color: white;
+            border: 1px solid #e5e5e5;
+            width: 864px;
+            height: 339px;
+            display: none;
+        }
+        /* 左侧选择属性 */
+        .yingxiongshuxing {
+            float: left;
+            height: 337px;
+            background-color: rgb(245, 245, 245);
+        }
+        /* 里面的小盒子 */
+        .yingxiongshuxing li {
+            font-size: 14px;
+            width: 100px;
+            text-align: center;
+            color: black;
+            height: 42px;
+            line-height: 42px;
+            cursor: pointer;
+        }
+        /* 小盒子浮动 */
+        .allheros {
+            float: left;
+        }
+        /* 小盒子样式 */
+        .allheros {
+            float: left;
+            width: 760px;
+            height: 334px;
+            padding: 12px 22px;
+        }
+        /* 内层英雄 */
+        .allheros ul li {
+            width: 60px;
+            float: left;
+            text-align: center;
+            margin: 0 26px 26px 0;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        /* 图片放置 */
+        .allheros ul li img {
+            display: block;
+            width: 60px;
+            height: 60px;
+        }
+        /* 点击后出现 */
+        .choosehero:hover .yingxiongbox {
+            display: block;
+        }
+
+        /* 赛事区域 */
+        .saichengxiangxi div {
+            width: 100%;
+            height: 67px;
+            line-height: 67px;
+            padding-left: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+
+        /* 赛程详细的内容 */
+        .saichengxiangxi div span {
+            display: block;
+            float: left;
+        }
+        /* 战队的图标 */
+        .saichengxiangxi .zhanduitubiao {
+            width: 80px;
+            height: 100%;
+            text-align: center;
+        }
+        /* 战队图像 */
+        .zhanduitubiao img {
+            width: 25px;
+            height: 25px;
+            margin: 10px auto 0px;
+            display: block;
+        }
+        /* 战队标题 */
+        .zhanduitubiao p {
+            height: 24px;
+            line-height: 24px;
+        }
+        /* 中间部分不同 */
+        .saichengxiangxi div span:nth-child(2) {
+            margin: 0 3px 0 13px;
+        }
+
+        .saichengxiangxi div span:nth-child(3) {
+            font-size: 14px;
+            width: 43px;
+            color: #f3c258;
+            text-align: center;
+        }
+        /* 赛程详细下部分 */
+        .saichengfooter {
+            margin-top: 22px;
+            width: 100%;
+            height: 160px;
+        }
+        /* 图像撑满 */
+        .saichengfooter img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 主页大背景图片 */
+        /* 主页背景图片====================================================== */
+        .footerbeijing {
+            position: relative;
+            z-index: 2;
+            height: 362px;
+            background: url(../images/common/footerbeijing.jpg) no-repeat center 0;
+        }
+        /* 结尾内容部分 */
+        .footerinner {
+            padding-top: 80px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        /* 结尾上层部分 */
+        .footerinner .footerinnertop {
+            padding-bottom: 12px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #d4d4d4;
+        }
+        /* 腾讯游戏 */
+        .tengxunyouxi {
+            float: left;
+            width: 285px;
+            height: 64px;
+            margin: 0;
+            background: url(../images/common/jinglingtu2.png) no-repeat;
+        }
+        /* 天美 */
+        .tianmei {
+            float: left;
+            width: 70px;
+            height: 64px;
+            margin: 0;
+            background: url(../images/common/jinglingtu2.png) no-repeat -285px 0;
+        }
+        /* 结尾左部分 */
+        .footerleft {
+            width: 508px;
+            font-size: 12px;
+            color: #666;
+        }
+        /* 左部分文字 */
+        .footerleft span {
+            display: inline-block;
+            font-style: normal;
+            margin-right: 8px;
+            margin-top: 3px;
+            color: #6d6d6d;
+        }
+        /* 左部分段落 */
+        .footerleft p {
+            margin-top: 6px;
+            line-height: 20px;
+        }
+        /* 左浮动 */
+        .left {
+            float: left;
+        }
+        /* 右浮动 */
+        .right {
+            float: right;
+            position: relative;
+        }
+        /* 右侧段落 */
+        .footerright p {
+            height: 23px;
+            line-height: 23px;
+        }
+        /* 版权 */
+        .banquan {
+            top: 23px;
+            right: 0px;
+            position: absolute;
+        }
+        /* 最后一行上面空隙大 */
+        .zuihouyihang {
+            margin-top: 30px;
+        }
+        /* 工商网 */
+        .gongshangwang {
+            position: relative;
+            top: -2px;
+            left: 1px;
+        }
+        /* 文优网 */
+        .wenyouwang {
+            position: relative;
+            top: -1px;
+            left: 2px;
+        }
+
+        /* 小妲己部分 */
+        .xiaodaji {
+            width: 254px;
+            height: 494px;
+            position: fixed;
+            z-index: 10;
+            top: 50%;
+            right: 0;
+            margin-top: -240px;
+            background: url(../images/common/xiaodajibeijingtu.png) no-repeat;
+        }
+        /* 妲己 */
+        .daji {
+            width: 165px;
+            height: 145px;
+            position: absolute;
+            top: 14px;
+            left: 24px;
+            z-index: 10;
+            background: url(../images/common/xiaodaji.png) no-repeat;
+        }
+        /* 文字 */
+        .daji span {
+            display: block;
+            width: 90px;
+            height: 38px;
+            line-height: 18px;
+            position: absolute;
+            top: 37px;
+            left: 12px;
+            font-size: 14px;
+            text-indent: 2px;
+            font-weight: 700;
+            color: #62401b;
+        }
+        /* 二维码 */
+        .erweima {
+            position: absolute;
+            top: 161px;
+            left: 85px;
+        }
+        /* 二维码超链接 */
+        .erweima a {
+            width: 117px;
+            display: block;
+            position: relative;
+        }
+        /* 最大的样式不同 */
+        .erweima a:nth-child(n+2) {
+            margin-top: 1px;
+            height: 38px;
+        }
+        /* 设置背景 */
+        .xiaodaji .erweima a:first-child {
+            width: 117px;
+            height: 116px;
+            background: url(../images/common/dajijinglingtu.png) no-repeat 0 -3px;
+            padding-top: 3px;
+        }
+        /* 设置图片大小 */
+        .xiaodaji .erweima a:first-child img {
+            width: 111px;
+            height: 110px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 其他的背景图片 */
+        .xiaodaji .erweima a:nth-child(2) {
+            background: url(../images/common/dajijinglingtu.png) no-repeat -122px -120px;
+        }
+
+        .xiaodaji .erweima a:nth-child(3) {
+            background: url(../images/common/dajijinglingtu.png) no-repeat -122px -160px;
+        }
+
+        .xiaodaji .erweima a:nth-child(4) {
+            margin-top: 0;
+            background: url(../images/common/dajijinglingtu.png) no-repeat -122px 0px;
+        }
+        /* 缓慢出现左侧的二维码 */
+        .erweima a div {
+            animation: manmanchuxian .3s ease-in-out;
+            position: absolute;
+            top: -66px;
+            left: -116px;
+            width: 115px;
+            height: 151px;
+            background: url(../images/common/dajijinglingtu.png) no-repeat 0 -416px;
+            padding-top: 7px;
+            display: none;
+        }
+        /* 点击出现 */
+        .xiaodaji .erweima a:nth-child(n+2):hover div {
+            display: block;
+        }
+        /* 设置图片大小 */
+        .erweima a div img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 6px;
+            width: 101px;
+            height: 100px;
+        }
+        /* 二维码 标题 */
+        .erweima a div p {
+            width: 100%;
+            height: 34px;
+            line-height: 17px;
+            color: #dcdcdc;
+            font-size: 12px;
+            text-align: center;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        /* 颜色 */
+        .dajise {
+            color: #cd974b;
+        }
